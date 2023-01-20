@@ -17,4 +17,6 @@ screen: package all screens files of the APP.
 utils: package utils files, in this case the functions to save the history.
 widget: package widgets that can be reused in the app.
 
+CompiledApp: contain web and Android version app on .zip
+
 Note: Google Maps Flutter package doesn't support well even the web version
