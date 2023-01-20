@@ -8,7 +8,8 @@ class SearchButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
+      constraints: const BoxConstraints(maxWidth: 400),
         height: 50,
         width: double.infinity,
         child: ElevatedButton(

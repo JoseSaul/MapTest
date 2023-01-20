@@ -38,7 +38,7 @@ class _SearchByPostalCodeWidget extends State<StatefulWidget> {
 
     Future<void> onClick() async {
       await LocationRepository.getWeatherByPostalCode(
-              postalController.text, _selectedItem)
+          postalController.text, _selectedItem)
           .then((value) {
         Navigator.push(
           context,
@@ -49,23 +49,48 @@ class _SearchByPostalCodeWidget extends State<StatefulWidget> {
 
     return Center(
         child: Container(
-      margin: const EdgeInsets.all(10),
-      child: Column(
-        children: [
-          EditText(
-            message: 'Enter a postal code',
-            controller: postalController,
+          margin: const EdgeInsets.all(10),
+          child: Column(
+            children: [
+              EditText(
+                message: 'Enter a postal code',
+                controller: postalController,
+              ),
+              const SizedBox(height: 15),
+              Container(
+                constraints: const BoxConstraints(maxWidth: 400),
+                child: DecoratedBox(
+                  decoration: const BoxDecoration(
+                    color:Colors.lightBlue, //background color of dropdown button//border of dropdown button
+                    borderRadius: BorderRadius.all(Radius.circular(8)), //border raiuds of dropdown button
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 30),
+                    child: DropdownButton<String>(
+                      icon: const Padding(
+                        padding: EdgeInsets.only(left:20),
+                        child: Icon(Icons.arrow_circle_down_sharp),
+                      ),
+                      iconEnabledColor: Colors.white,
+                      style: const TextStyle(  //te
+                          color: Colors.white, //Font color
+                          fontSize: 20 //font size on dropdown button
+                      ),
+                      dropdownColor: Colors.lightBlue,
+                      underline: Container(),
+                      isExpanded: true,
+                      value: _selectedItem,
+                      items: getItems(),
+                      onChanged: onSelected,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 40),
+              SearchButton(function: () => onClick),
+            ],
           ),
-          DropdownButton<String>(
-            value: _selectedItem,
-            items: getItems(),
-            onChanged: onSelected,
-          ),
-          const SizedBox(height: 30),
-          SearchButton(function: () => onClick),
-        ],
-      ),
-    ));
+        ));
   }
 }
 
