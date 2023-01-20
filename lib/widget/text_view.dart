@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class TextView extends StatelessWidget {
   const TextView(this.title, this.message, {Key? key}) : super(key: key);

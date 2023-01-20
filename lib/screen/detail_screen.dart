@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:map_test/model/result.dart';
 import 'package:map_test/widget/text_view.dart';

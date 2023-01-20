@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:map_test/model/save_data_model.dart';
 import 'package:map_test/repository/location_repository.dart';
