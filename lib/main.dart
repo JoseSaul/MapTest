@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:map_test/screen/main/history_screen.dart';
 import 'package:map_test/screen/main/search_by_location_screen.dart';
 import 'package:map_test/screen/main/search_by_postal_code_screen.dart';
 
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
               children: [
                 SearchByLocationWidget(),
                 SearchByPostalCodeWidget(),
-                Icon(Icons.directions_bike),
+                HistoryScreen(),
               ],
             ),
           ),

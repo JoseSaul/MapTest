@@ -9,13 +9,14 @@ class SearchButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: const BoxConstraints(maxWidth: 400),
+        constraints: const BoxConstraints(maxWidth: 400),
         height: 50,
         width: double.infinity,
         child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.lightBlue, foregroundColor: Colors.white),
           onPressed: function(),
           child: const Text('Search'),
-        )
-    );
+        ));
   }
 }
