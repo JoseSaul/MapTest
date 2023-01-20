@@ -9,7 +9,7 @@ part 'api_client.g.dart';
 abstract class ApiClient {
   factory ApiClient(Dio dio, {String baseUrl}) = _ApiClient;
 
-  static const String key = '';
+  static const String key = '0002decaf68c4f458d447f0cc796fc1b';
 
   @GET('/current?key=$key')
   Future<Result> getCurrentWeather(

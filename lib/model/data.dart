@@ -25,7 +25,7 @@ class Data {
   @JsonKey(name: 'rh')
   double rh;
   @JsonKey(name: 'clouds')
-  String clouds;
+  int clouds;
   @JsonKey(name: 'weather')
   Weather weather;
 

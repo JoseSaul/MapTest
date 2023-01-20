@@ -7,7 +7,7 @@ part 'result.g.dart';
 class Result {
 
   @JsonKey(name: 'count')
-  String count;
+  int count;
   @JsonKey(name: 'data')
   List<Data> data;
 
